@@ -4,13 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let contactForm = document.querySelector('#contactForm');
     let navLinks = document.querySelectorAll('nav ul li a');
     let topButton = document.querySelector('#topButton');
+    let yearEl = document.querySelector('#year');
+
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 
     if (window.Typed) {
         new Typed('#element', {
-            strings: ['Web Developer', 'Software Developer', 'Web Designer', 'Java With DSA', 'Software Developer'],
-            typeSpeed: 100,
-            backSpeed: 55,
-            backDelay: 1000,
+            strings: ['Web Developer', 'MERN Stack Developer', 'Java & DSA Enthusiast', 'Problem Solver'],
+            typeSpeed: 90,
+            backSpeed: 50,
+            backDelay: 1200,
+            showCursor: false,
             loop: true
         });
     }
@@ -98,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
 
                 successMessage.textContent = 'Validation successful. Opening your email app...';
-                window.location.href = `mailto:ashukumar2597@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+                window.location.href = `mailto:ashumaurya2597@gmail.com?subject=${mailSubject}&body=${mailBody}`;
                 contactForm.reset();
             }
         });

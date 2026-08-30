@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashu's - Developer Portfolio</title>
+    <title>Ashu Singh — Web Developer Portfolio</title>
+    <meta name="description" content="Ashu Singh — Web Developer building with JavaScript, Java, DSA and Node.js.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css">
     <link rel="icon" href="ashuicon.jpg">
 </head>
 <body>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="Portfolio.js" defer></script>
 
 <header>
     <nav>
-        <div class="left">Ashu's Portfolio</div>
+        <a href="#first6" class="logo"><span class="brace">&lt;</span>Ashu.dev<span class="brace">/&gt;</span></a>
         <i class="bx bx-menu" id="menu-icon"></i>
         <div class="right">
             <ul>
                 <li><a href="#first6">Home</a></li>
-                <li><a href="#about6">About</a></li>
+                <li><a href="#about6">Log</a></li>
                 <li><a href="#services6">Services</a></li>
-                <li><a href="#projects6">Projects</a></li>
-                <li><a href="#contact6">Contact Me</a></li>
+                <li><a href="#projects6">Work</a></li>
+                <li><a href="#contact6">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -34,69 +34,82 @@
 <main>
     <section class="firstsectoin" id="first6">
         <div class="leftsection">
-            Hi, My name is 
-            <span class="purple" style="color: rgba(160, 224, 10, 0.89);">Ashu Singh</span>
-            <div>and i am a passionate</div>
-            <div>Web Developer</div>
-            <span id="element"></span>
+            <p class="eyebrow">// hello world</p>
+            <div class="code-card">
+                <div class="code-card__tab">
+                    <i class='bx bx-code-alt'></i>
+                    <span>profile.js</span>
+                </div>
+                <pre class="code-card__body"><code><span class="ln">1</span><span class="tok-kw">const</span> <span class="tok-var">developer</span> = {
+<span class="ln">2</span>  name: <span class="tok-str">"Ashu Singh"</span>,
+<span class="ln">3</span>  role: <span class="tok-str">"<span id="element"></span></span><span class="tok-cursor">|</span><span class="tok-str">"</span>,
+<span class="ln">4</span>  stack: [<span class="tok-str">"MongoDB"</span>, <span class="tok-str">"Express"</span>, <span class="tok-str">"React"</span>, <span class="tok-str">"Node"</span>],
+<span class="ln">5</span>  loves: <span class="tok-str">"DSA & problem solving"</span>,
+<span class="ln">6</span>  status: <span class="tok-str">"open to work"</span>,
+<span class="ln">7</span>};</code></pre>
+            </div>
             <div class="buttens">
-                <a href="file:///C:/Users/dell/OneDrive/Desktop/Ashu_Resume.pdf" target="_blank">
-                    <button style="background-color: rgba(160, 224, 10, 0.89);">Download Resume</button>
+                <a href="Ashu_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <button class="btn_primary"><i class='bx bx-download'></i> Download Resume</button>
                 </a>
                 <a href="https://github.com/AshuMaurya1" target="_blank" rel="noopener noreferrer">
-                    <button style="background-color: rgba(160, 224, 10, 0.89);">Visit Github</button>
+                    <button class="btn_ghost"><i class='bx bxl-github'></i> Visit GitHub</button>
                 </a>
             </div>
         </div>
         <div class="rightsectoin">
-            <img src="ashuicon.jpg" alt="ASHU">
+            <div class="avatar-frame">
+                <span class="avatar-fallback">AS</span>
+                <img src="ashuicon.jpg" alt="Ashu Singh" onerror="this.style.display='none'">
+            </div>
         </div>
     </section>
 
-    <section class="skills_section">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>DSA</span>
-        <span>Node.js</span>
+    <section class="skills_section" aria-label="Skills">
+        <span class="skill_tag" style="--dot:#e34c26">HTML</span>
+        <span class="skill_tag" style="--dot:#4d94ff">CSS</span>
+        <span class="skill_tag" style="--dot:#f1e05a">JavaScript</span>
+        <span class="skill_tag" style="--dot:#e07a1f">Java</span>
+        <span class="skill_tag" style="--dot:#d2a8ff">DSA</span>
+        <span class="skill_tag" style="--dot:#3c873a">Node.js</span>
+        <span class="skill_tag" style="--dot:#61dafb">MERN Stack</span>
     </section>
-    
+
     <hr>
 
     <section class="SecontSection" id="about6">
-        <span class="text_gray">What I have so Far</span>
-        <h1>Work Experience</h1>
+        <span class="text_gray">// what i have so far</span>
+        <h1>$ git log --learning-path</h1>
         <div class="box">
             <div class="vertical">
-                <img class="image_top" src="pngwing.com.png" alt="Java icon">
-                <div class="vertical_title">Java Developer <br> DSA</div>
-                <div class="vertical_desc">I am learning Java programming and Data Structures & Algorithms to improve problem solving and coding skills.</div>
+                <span class="hash">a1c9f2d</span>
+                <div class="vertical_title">HTML & CSS Foundations</div>
+                <div class="vertical_desc">Learned semantic HTML and responsive CSS layouts — the building blocks for everything that came after.</div>
             </div>
             <div class="vertical">
-                <img class="image_top" src="pngwing.com (2).png" alt="Node icon">
-                <div class="vertical_title">Node.js Developer <br> Backend Dev</div>
-                <div class="vertical_desc">I build server-side applications, APIs, and backend features using Node.js, JavaScript, and database connectivity.</div>
+                <span class="hash">6b7e401</span>
+                <div class="vertical_title">JavaScript & Interactivity</div>
+                <div class="vertical_desc">Added JavaScript to bring pages to life — DOM manipulation, events, and dynamic UI behaviour.</div>
             </div>
             <div class="vertical">
-                <img class="image_top" src="pngwing.com (1).png" alt="Insta icon">
-                <div class="vertical_title">HTML Developer <br> Instagram (2012-2014)</div>
-                <div class="vertical_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam libero dolores a doloremque in, assumenda delectus.</div>
+                <span class="hash">f3d8c19</span>
+                <div class="vertical_title">Java & Data Structures</div>
+                <div class="vertical_desc">Currently strengthening problem-solving with Java and DSA — building a solid computer-science foundation.</div>
             </div>
             <div class="vertical">
-                <img class="image_top" src="pngwing.com (3).png" alt="Twitter icon">
-                <div class="vertical_title">HTML Developer <br> Twitter (2014-2016)</div>
-                <div class="vertical_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam libero dolores a doloremque in, assumenda delectus.</div>
+                <span class="hash">9a2b6ee</span>
+                <div class="vertical_title">Node.js & Backend Dev</div>
+                <div class="vertical_desc">Building server-side apps, REST APIs, and database-backed features with Node.js and JavaScript.</div>
             </div>
             <div class="vertical">
-                <img class="image_top" src="pngwing.com (1).png" alt="Insta icon">
-                <div class="vertical_title">HTML Developer <br> Instagram (2016-2018)</div>
-                <div class="vertical_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam libero dolores a doloremque in, assumenda delectus.</div>
+                <span class="hash">c4f710b</span>
+                <div class="vertical_title">React.js & MERN Specialization</div>
+                <div class="vertical_desc">Completed a full-stack React.js specialization and started shipping complete MERN (MongoDB, Express, React, Node) projects end to end.</div>
             </div>
             <div class="vertical">
-                <img class="image_top" src="pngwing.com (4).png" alt="YouTube icon">
-                <div class="vertical_title">HTML Developer <br> YouTube (2018-2020)</div>
-                <div class="vertical_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam libero dolores a doloremque in, assumenda delectus.</div>
+                <span class="hash">e82a15c</span>
+                <div class="vertical_title">DSA Practice on LeetCode</div>
+                <div class="vertical_desc">Solved 280+ algorithmic problems with an active streak — arrays, linked lists, trees, and memoization — to sharpen problem-solving.</div>
             </div>
         </div>
     </section>
@@ -104,24 +117,38 @@
     <hr>
 
     <section class="services_section" id="services6">
-        <span class="text_gray">What I Offer</span>
+        <span class="text_gray">// what i offer</span>
         <h1>My Services</h1>
         <div class="services_container">
             <div class="service_card">
+                <i class='bx bx-code-alt service_icon'></i>
                 <h2>Web Development</h2>
-                <p>I build responsive and modern websites using HTML, CSS, JavaScript, and clean layouts that work well on mobile and desktop.</p>
+                <p>I build responsive, modern websites with HTML, CSS and JavaScript — clean layouts that work well on mobile and desktop.</p>
             </div>
             <div class="service_card">
-                <h2>Web Design</h2>
-                <p>I create attractive page designs, portfolio layouts, landing pages, and user-friendly interfaces with a professional look.</p>
+                <i class='bx bx-devices service_icon'></i>
+                <h2>Responsive Design</h2>
+                <p>I turn designs into pixel-careful, mobile-first interfaces — portfolio layouts, landing pages, and reusable UI.</p>
             </div>
             <div class="service_card">
-                <h2>Software Developer</h2>
-                <p>I design banners, posters, thumbnails, logos, and social media graphics that help brands look polished and memorable.</p>
+                <i class='bx bx-server service_icon'></i>
+                <h2>Backend & APIs</h2>
+                <p>I build server-side logic and REST APIs with Node.js, including database connectivity and authentication.</p>
             </div>
             <div class="service_card">
-                <h2>Video Editing</h2>
-                <p>I edit videos with smooth cuts, captions, effects, and creative styling for YouTube, reels, and promotional content.</p>
+                <i class='bx bx-brain service_icon'></i>
+                <h2>Java & DSA</h2>
+                <p>I write efficient, well-structured Java and apply data structures & algorithms to solve real problems.</p>
+            </div>
+            <div class="service_card">
+                <i class='bx bx-data service_icon'></i>
+                <h2>Database Design</h2>
+                <p>I design clean, well-validated MongoDB schemas and relational data models that keep applications consistent and scalable.</p>
+            </div>
+            <div class="service_card">
+                <i class='bx bxl-git service_icon'></i>
+                <h2>Git & Collaboration</h2>
+                <p>I use Git and GitHub for version control, branching, and code review — keeping projects organised and easy to collaborate on.</p>
             </div>
         </div>
     </section>
@@ -129,31 +156,55 @@
     <hr>
 
     <section class="projects_section" id="projects6">
-        <span class="text_gray">My Recent Work</span>
+        <span class="text_gray">// my recent work</span>
         <h1>Projects</h1>
         <div class="projects_container">
             <div class="project_card">
-                <img src="Developer.avif" alt="Portfolio website project">
+                <div class="project_thumb project_thumb--4">
+                    <i class='bx bxs-truck'></i>
+                    <img src="Cover_Banner.svg" alt="Tractor Rental Platform" onerror="this.style.display='none'">
+                </div>
                 <div class="project_content">
-                    <h2>Voice Assistant</h2>
-                    <p>A smart voice assistant project that can listen to voice commands and perform useful tasks with a simple user experience.</p>
-                    <a href="#first6">View Project</a>
+                    <h2><i class='bx bx-folder'></i> Tractor Rental Platform</h2>
+                    <p>A web platform that connects tractor owners with farmers who need equipment, replacing phone-call and word-of-mouth booking with location- and date-based search. Includes a conflict-free booking engine that prevents double-booking, and an owner dashboard for tracking listings, bookings, and revenue.</p>
+                    <div class="tags"><span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span></div>
+                    <a href="#projects6">View Project <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
             <div class="project_card">
-                <img src="dev.png" alt="Web development project">
+                <div class="project_thumb project_thumb--1">
+                    <i class='bx bx-microphone-alt'></i>
+                    <img src="Developer.avif" alt="Voice Assistant project" onerror="this.style.display='none'">
+                </div>
                 <div class="project_content">
-                    <h2>Traffic Congestion Control</h2>
-                    <p>A traffic management project designed to reduce congestion and improve road flow using smart control logic.</p>
-                    <a href="#services6">View Project</a>
+                    <h2><i class='bx bx-folder'></i> Voice Assistant</h2>
+                    <p>A smart voice assistant that listens for voice commands and performs useful tasks through a simple, natural interface.</p>
+                    <div class="tags"><span>JavaScript</span><span>Web Speech API</span></div>
+                    <a href="#first6">View Project <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
             <div class="project_card">
-                <img src="ashuicon.jpg" alt="Graphic design project">
+                <div class="project_thumb project_thumb--2">
+                    <i class='bx bx-traffic-cone'></i>
+                    <img src="dev.png" alt="Traffic Congestion Control project" onerror="this.style.display='none'">
+                </div>
                 <div class="project_content">
-                    <h2>Creative Design Work</h2>
-                    <p>Graphic design samples including banners, thumbnails, and social media visuals made for attractive branding.</p>
-                    <a href="#projects6">View Project</a>
+                    <h2><i class='bx bx-folder'></i> Traffic Congestion Control</h2>
+                    <p>A traffic-management project that reduces congestion and improves road flow using smart control logic.</p>
+                    <div class="tags"><span>Java</span><span>Algorithms</span></div>
+                    <a href="#services6">View Project <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+            <div class="project_card">
+                <div class="project_thumb project_thumb--3">
+                    <i class='bx bx-palette'></i>
+                    <img src="Design.jpg" alt="Creative design work" onerror="this.style.display='none'">
+                </div>
+                <div class="project_content">
+                    <h2><i class='bx bx-folder'></i> Creative Design Work</h2>
+                    <p>Graphic design samples — banners, thumbnails, and social visuals made for clean, attractive branding.</p>
+                    <div class="tags"><span>Design</span><span>Branding</span></div>
+                    <a href="#projects6">View Project <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
         </div>
@@ -162,42 +213,43 @@
     <hr>
 
     <section class="contact_section" id="contact6">
+        <span class="text_gray" style="text-align:center;">// let's talk</span>
         <h1>Contact Me</h1>
         <div class="contact_container">
             <div class="contact_info">
                 <h2>Let's Work Together</h2>
-                <p>If you want a website, design work, or project help, send me a message and I will contact you soon.</p>
+                <p>If you want a website, design work, or project help, send me a message and I'll get back to you soon.</p>
                 <div class="contact_item">
-                    <strong>Email:</strong>
-                    <span>ashukumar2597@gmail.com</span>
+                    <strong><i class='bx bx-envelope'></i> Email</strong>
+                    <span>ashumaurya2597@gmail.com</span>
                 </div>
                 <div class="contact_item">
-                    <strong>Phone:</strong>
+                    <strong><i class='bx bx-phone'></i> Phone</strong>
                     <span>+91 91706 61995</span>
                 </div>
                 <div class="contact_item">
-                    <strong>Location:</strong>
+                    <strong><i class='bx bx-map'></i> Location</strong>
                     <span>India</span>
                 </div>
             </div>
             <form class="contact_form" id="contactForm" novalidate>
                 <input type="text" id="name" placeholder="Your Name" required>
                 <small class="error_message" id="nameError"></small>
-                
+
                 <input type="email" id="email" placeholder="Your Email" autocomplete="email" required>
                 <small class="error_message" id="emailError"></small>
-                
+
                 <input type="tel" id="phone" placeholder="Your Phone Number" autocomplete="tel" required>
                 <small class="error_message" id="phoneError"></small>
-                
+
                 <input type="text" id="subject" placeholder="Subject" required>
                 <small class="error_message" id="subjectError"></small>
-                
+
                 <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
                 <small class="error_message" id="messageError"></small>
-                
+
                 <p class="success_message" id="successMessage"></p>
-                <button type="submit">Send Message</button>
+                <button type="submit" class="btn_primary">Send Message</button>
             </form>
         </div>
     </section>
@@ -205,42 +257,38 @@
 
 <footer>
     <div class="footer">
-        <div class="footer_first">
-            <h3>Ashu's Software Developer Portfolio</h3>
+        <div class="footer_brand">
+            <h3><span class="brace">&lt;</span>Ashu.dev<span class="brace">/&gt;</span></h3>
+            <p>Web Developer building clean interfaces and solid backends — one commit at a time.</p>
         </div>
-        <div class="footer_second">
+        <div class="footer_links">
+            <h4>Quick Links</h4>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Contact</li>
+                <li><a href="#first6">Home</a></li>
+                <li><a href="#about6">Log</a></li>
+                <li><a href="#services6">Services</a></li>
+                <li><a href="#projects6">Work</a></li>
+                <li><a href="#contact6">Contact</a></li>
             </ul>
         </div>
-        <div class="footer_third">
+        <div class="footer_connect">
+            <h4>Get in Touch</h4>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Contact</li>
-            </ul>
-        </div>
-        <div class="footer_fourth">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Contact</li>
+                <li><i class='bx bx-envelope'></i> ashumaurya2597@gmail.com</li>
+                <li><i class='bx bx-phone'></i> +91 91706 61995</li>
+                <li><a href="https://github.com/AshuMaurya1" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> github.com/AshuMaurya1</a></li>
             </ul>
         </div>
     </div>
     <div class="footer_right">
-        Copyright &#169; ashusportfilio.com | All rights reserved
+        Copyright &#169; <span id="year"></span> Ashu Singh | All rights reserved
     </div>
 </footer>
 
 <button class="top_button" id="topButton" aria-label="Back to top">
     <i class="bx bx-up-arrow-alt"></i>
 </button>
-    
+
+<script src="Portfolio.js" defer></script>
 </body>
 </html>
