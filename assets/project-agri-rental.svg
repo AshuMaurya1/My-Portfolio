@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="agri-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="50%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="tractor-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <filter id="shadow-agri" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#agri-bg)"/>
+
+  <!-- Field landscape lines -->
+  <path d="M0 260 Q 300 210 600 270 L 600 400 L 0 400 Z" fill="#042f2e" opacity="0.6"/>
+  <path d="M0 290 Q 280 250 600 310 L 600 400 L 0 400 Z" fill="#022c22" opacity="0.8"/>
+
+  <!-- Web Application UI Card -->
+  <g transform="translate(65, 30)" filter="url(#shadow-agri)">
+    <rect x="0" y="0" width="470" height="290" rx="16" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    
+    <!-- Top Nav Header -->
+    <rect x="0" y="0" width="470" height="36" rx="16" fill="#1e293b"/>
+    <text x="20" y="23" fill="#10b981" font-family="'Outfit', sans-serif" font-size="12" font-weight="700">AgroRent MERN Platform</text>
+    <text x="320" y="23" fill="#94a3b8" font-family="'Outfit', sans-serif" font-size="10">JWT • MongoDB • Node.js</text>
+
+    <!-- Rental Listing Card 1 (Tractor) -->
+    <rect x="20" y="52" width="205" height="150" rx="12" fill="#1e293b"/>
+    <!-- Tractor Illustration -->
+    <rect x="30" y="62" width="185" height="75" rx="8" fill="#0f172a"/>
+    <!-- Tractor body -->
+    <rect x="70" y="80" width="55" height="35" rx="4" fill="#16a34a"/>
+    <rect x="110" y="70" width="35" height="45" rx="4" fill="#22c55e"/>
+    <rect x="115" y="74" width="24" height="18" rx="2" fill="#38bdf8" opacity="0.8"/>
+    <!-- Wheels -->
+    <circle cx="65" cy="115" r="14" fill="#334155" stroke="#facc15" stroke-width="3"/>
+    <circle cx="65" cy="115" r="6" fill="#fff"/>
+    <circle cx="140" cy="110" r="22" fill="#334155" stroke="#facc15" stroke-width="4"/>
+    <circle cx="140" cy="110" r="9" fill="#fff"/>
+
+    <text x="30" y="156" fill="#fff" font-family="'Outfit', sans-serif" font-size="11" font-weight="700">John Deere 5050D</text>
+    <text x="30" y="170" fill="#10b981" font-family="'Outfit', sans-serif" font-size="10" font-weight="600">&#8377;1,200 / day</text>
+    <rect x="150" y="150" width="65" height="22" rx="11" fill="#16a34a"/>
+    <text x="162" y="165" fill="#fff" font-family="'Outfit', sans-serif" font-size="9" font-weight="700">Book Now</text>
+
+    <!-- Rental Listing Card 2 (Harvester) -->
+    <rect x="245" y="52" width="205" height="150" rx="12" fill="#1e293b"/>
+    <rect x="255" y="62" width="185" height="75" rx="8" fill="#0f172a"/>
+    <!-- Harvester stylized -->
+    <rect x="285" y="75" width="80" height="40" rx="4" fill="#eab308"/>
+    <circle cx="285" cy="115" r="16" fill="#334155" stroke="#fff" stroke-width="3"/>
+    <circle cx="365" cy="115" r="14" fill="#334155" stroke="#fff" stroke-width="3"/>
+
+    <text x="255" y="156" fill="#fff" font-family="'Outfit', sans-serif" font-size="11" font-weight="700">Combine Harvester</text>
+    <text x="255" y="170" fill="#10b981" font-family="'Outfit', sans-serif" font-size="10" font-weight="600">&#8377;3,500 / day</text>
+    <rect x="375" y="150" width="65" height="22" rx="11" fill="#16a34a"/>
+    <text x="387" y="165" fill="#fff" font-family="'Outfit', sans-serif" font-size="9" font-weight="700">Book Now</text>
+
+    <!-- Bottom Owner Dashboard Portal Banner -->
+    <rect x="20" y="214" width="430" height="60" rx="10" fill="#1e293b"/>
+    <text x="34" y="238" fill="#fff" font-family="'Outfit', sans-serif" font-size="11" font-weight="600">Owner Management Portal</text>
+    <text x="34" y="254" fill="#94a3b8" font-family="'Outfit', sans-serif" font-size="9">10+ REST endpoints • 0% scheduling conflicts • Real-time inventory</text>
+    <rect x="340" y="228" width="95" height="26" rx="13" fill="#047857"/>
+    <text x="352" y="245" fill="#fff" font-family="'Outfit', sans-serif" font-size="9" font-weight="700">Revenue: &#8377;84,500</text>
+  </g>
+</svg>

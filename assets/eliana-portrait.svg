@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-portrait" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1f2"/>
+      <stop offset="50%" stop-color="#fdf4ff"/>
+      <stop offset="100%" stop-color="#f5f3ff"/>
+    </linearGradient>
+    <linearGradient id="hair-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b1f14"/>
+      <stop offset="100%" stop-color="#24120a"/>
+    </linearGradient>
+    <linearGradient id="skin-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd5be"/>
+      <stop offset="100%" stop-color="#f8be9e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="480" rx="28" fill="url(#bg-portrait)"/>
+
+  <!-- Subtle glow ring -->
+  <circle cx="200" cy="220" r="160" fill="#f43f5e" opacity="0.08"/>
+
+  <!-- Character / Portrait representation -->
+  <!-- Shoulders / Blouse -->
+  <path d="M90 480 C 100 370, 140 340, 200 340 C 260 340, 300 370, 310 480 Z" fill="#4c3d3d"/>
+  <path d="M160 340 L 200 395 L 240 340 Z" fill="url(#skin-grad)"/>
+
+  <!-- Back Hair -->
+  <ellipse cx="200" cy="220" rx="105" ry="135" fill="url(#hair-grad)"/>
+
+  <!-- Neck -->
+  <rect x="175" y="270" width="50" height="80" rx="14" fill="url(#skin-grad)"/>
+
+  <!-- Face Head -->
+  <ellipse cx="200" cy="210" rx="72" ry="86" fill="url(#skin-grad)"/>
+
+  <!-- Front Hair Curls -->
+  <path d="M120 180 Q 150 110 200 110 Q 250 110 280 180 Q 290 260 270 290 Q 260 210 240 160 Q 200 145 160 160 Q 140 210 130 290 Q 110 260 120 180 Z" fill="url(#hair-grad)"/>
+
+  <!-- Eyes -->
+  <ellipse cx="172" cy="205" rx="7" ry="5" fill="#2d1500"/>
+  <circle cx="174" cy="203" r="2" fill="#fff"/>
+  <path d="M162 196 Q 172 192 182 196" stroke="#2d1500" stroke-width="2.5" fill="none"/>
+
+  <ellipse cx="228" cy="205" rx="7" ry="5" fill="#2d1500"/>
+  <circle cx="230" cy="203" r="2" fill="#fff"/>
+  <path d="M218 196 Q 228 192 238 196" stroke="#2d1500" stroke-width="2.5" fill="none"/>
+
+  <!-- Soft Cheeks -->
+  <circle cx="160" cy="224" r="14" fill="#f43f5e" opacity="0.18"/>
+  <circle cx="240" cy="224" r="14" fill="#f43f5e" opacity="0.18"/>
+
+  <!-- Nose -->
+  <path d="M198 210 Q 202 226 195 230 H 205" stroke="#e09f80" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Smile -->
+  <path d="M182 248 Q 200 266 218 248" stroke="#be123c" stroke-width="3" fill="#ffffff" stroke-linecap="round"/>
+
+  <!-- Earrings -->
+  <circle cx="132" cy="228" r="6" fill="#f59e0b"/>
+  <circle cx="268" cy="228" r="6" fill="#f59e0b"/>
+</svg>

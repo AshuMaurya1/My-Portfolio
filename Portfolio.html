@@ -1,294 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashu Singh — Web Developer Portfolio</title>
-    <meta name="description" content="Ashu Singh — Web Developer building with JavaScript, Java, DSA and Node.js.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="portfolio.css">
-    <link rel="icon" href="ashuicon.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashu Kumar Maurya — Full-Stack Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Ashu Kumar Maurya, a Full-Stack Web Developer based in Ghaziabad, UP specializing in React.js, Node.js, Express, MongoDB (MERN Stack), and Machine Learning with 300+ DSA algorithmic problems solved.">
+  <meta name="author" content="Ashu Kumar Maurya">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="ashuicon.jpg">
+
+  <!-- Google Fonts: Ovo (Serif) & Outfit (Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Ovo&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Boxicons for clean modern UI icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- Ambient Top Lighting Flare -->
+  <div class="ambient-lighting" aria-hidden="true"></div>
 
-<header>
-    <nav>
-        <a href="#first6" class="logo"><span class="brace">&lt;</span>Ashu.dev<span class="brace">/&gt;</span></a>
-        <i class="bx bx-menu" id="menu-icon"></i>
-        <div class="right">
-            <ul>
-                <li><a href="#first6">Home</a></li>
-                <li><a href="#about6">Log</a></li>
-                <li><a href="#services6">Services</a></li>
-                <li><a href="#projects6">Work</a></li>
-                <li><a href="#contact6">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+  <!-- Header / Navigation Bar -->
+  <header>
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="Home">
+        ashu<span class="dot">.</span>
+      </a>
 
-<main>
-    <section class="firstsectoin" id="first6">
-        <div class="leftsection">
-            <p class="eyebrow">// hello world</p>
-            <div class="code-card">
-                <div class="code-card__tab">
-                    <i class='bx bx-code-alt'></i>
-                    <span>profile.js</span>
-                </div>
-                <pre class="code-card__body"><code><span class="ln">1</span><span class="tok-kw">const</span> <span class="tok-var">developer</span> = {
-<span class="ln">2</span>  name: <span class="tok-str">"Ashu Singh"</span>,
-<span class="ln">3</span>  role: <span class="tok-str">"<span id="element"></span></span><span class="tok-cursor">|</span><span class="tok-str">"</span>,
-<span class="ln">4</span>  stack: [<span class="tok-str">"MongoDB"</span>, <span class="tok-str">"Express"</span>, <span class="tok-str">"React"</span>, <span class="tok-str">"Node"</span>],
-<span class="ln">5</span>  loves: <span class="tok-str">"DSA & problem solving"</span>,
-<span class="ln">6</span>  status: <span class="tok-str">"open to work"</span>,
-<span class="ln">7</span>};</code></pre>
-            </div>
-            <div class="buttens">
-                <a href="Ashu_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                    <button class="btn_primary"><i class='bx bx-download'></i> Download Resume</button>
-                </a>
-                <a href="https://github.com/AshuMaurya1" target="_blank" rel="noopener noreferrer">
-                    <button class="btn_ghost"><i class='bx bxl-github'></i> Visit GitHub</button>
-                </a>
-            </div>
-        </div>
-        <div class="rightsectoin">
-            <div class="avatar-frame">
-                <span class="avatar-fallback">AS</span>
-                <img src="ashuicon.jpg" alt="Ashu Singh" onerror="this.style.display='none'">
-            </div>
-        </div>
-    </section>
+      <!-- Center Floating Pill Navigation -->
+      <nav class="nav-menu-wrapper" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About me</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#work" class="nav-link">My work</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-    <section class="skills_section" aria-label="Skills">
-        <span class="skill_tag" style="--dot:#e34c26">HTML</span>
-        <span class="skill_tag" style="--dot:#4d94ff">CSS</span>
-        <span class="skill_tag" style="--dot:#f1e05a">JavaScript</span>
-        <span class="skill_tag" style="--dot:#e07a1f">Java</span>
-        <span class="skill_tag" style="--dot:#d2a8ff">DSA</span>
-        <span class="skill_tag" style="--dot:#3c873a">Node.js</span>
-        <span class="skill_tag" style="--dot:#61dafb">MERN Stack</span>
-    </section>
+      <!-- Right Navigation Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="btn-theme-toggle" aria-label="Toggle light and dark mode" title="Toggle Theme">
+          <i class='bx bx-moon'></i>
+        </button>
 
-    <hr>
+        <!-- Connect Action Button -->
+        <a href="#contact" class="btn-connect">
+          <span>Connect</span>
+          <i class='bx bx-right-arrow-alt'></i>
+        </a>
 
-    <section class="SecontSection" id="about6">
-        <span class="text_gray">// what i have so far</span>
-        <h1>$ git log --learning-path</h1>
-        <div class="box">
-            <div class="vertical">
-                <span class="hash">a1c9f2d</span>
-                <div class="vertical_title">HTML & CSS Foundations</div>
-                <div class="vertical_desc">Learned semantic HTML and responsive CSS layouts — the building blocks for everything that came after.</div>
-            </div>
-            <div class="vertical">
-                <span class="hash">6b7e401</span>
-                <div class="vertical_title">JavaScript & Interactivity</div>
-                <div class="vertical_desc">Added JavaScript to bring pages to life — DOM manipulation, events, and dynamic UI behaviour.</div>
-            </div>
-            <div class="vertical">
-                <span class="hash">f3d8c19</span>
-                <div class="vertical_title">Java & Data Structures</div>
-                <div class="vertical_desc">Currently strengthening problem-solving with Java and DSA — building a solid computer-science foundation.</div>
-            </div>
-            <div class="vertical">
-                <span class="hash">9a2b6ee</span>
-                <div class="vertical_title">Node.js & Backend Dev</div>
-                <div class="vertical_desc">Building server-side apps, REST APIs, and database-backed features with Node.js and JavaScript.</div>
-            </div>
-            <div class="vertical">
-                <span class="hash">c4f710b</span>
-                <div class="vertical_title">React.js & MERN Specialization</div>
-                <div class="vertical_desc">Completed a full-stack React.js specialization and started shipping complete MERN (MongoDB, Express, React, Node) projects end to end.</div>
-            </div>
-            <div class="vertical">
-                <span class="hash">e82a15c</span>
-                <div class="vertical_title">DSA Practice on LeetCode</div>
-                <div class="vertical_desc">Solved 280+ algorithmic problems with an active streak — arrays, linked lists, trees, and memoization — to sharpen problem-solving.</div>
-            </div>
-        </div>
-    </section>
-
-    <hr>
-
-    <section class="services_section" id="services6">
-        <span class="text_gray">// what i offer</span>
-        <h1>My Services</h1>
-        <div class="services_container">
-            <div class="service_card">
-                <i class='bx bx-code-alt service_icon'></i>
-                <h2>Web Development</h2>
-                <p>I build responsive, modern websites with HTML, CSS and JavaScript — clean layouts that work well on mobile and desktop.</p>
-            </div>
-            <div class="service_card">
-                <i class='bx bx-devices service_icon'></i>
-                <h2>Responsive Design</h2>
-                <p>I turn designs into pixel-careful, mobile-first interfaces — portfolio layouts, landing pages, and reusable UI.</p>
-            </div>
-            <div class="service_card">
-                <i class='bx bx-server service_icon'></i>
-                <h2>Backend & APIs</h2>
-                <p>I build server-side logic and REST APIs with Node.js, including database connectivity and authentication.</p>
-            </div>
-            <div class="service_card">
-                <i class='bx bx-brain service_icon'></i>
-                <h2>Java & DSA</h2>
-                <p>I write efficient, well-structured Java and apply data structures & algorithms to solve real problems.</p>
-            </div>
-            <div class="service_card">
-                <i class='bx bx-data service_icon'></i>
-                <h2>Database Design</h2>
-                <p>I design clean, well-validated MongoDB schemas and relational data models that keep applications consistent and scalable.</p>
-            </div>
-            <div class="service_card">
-                <i class='bx bxl-git service_icon'></i>
-                <h2>Git & Collaboration</h2>
-                <p>I use Git and GitHub for version control, branching, and code review — keeping projects organised and easy to collaborate on.</p>
-            </div>
-        </div>
-    </section>
-
-    <hr>
-
-    <section class="projects_section" id="projects6">
-        <span class="text_gray">// my recent work</span>
-        <h1>Projects</h1>
-        <div class="projects_container">
-            <div class="project_card">
-                <div class="project_thumb project_thumb--4">
-                    <i class='bx bxs-truck'></i>
-                    <img src="Cover_Banner.svg" alt="Tractor Rental Platform" onerror="this.style.display='none'">
-                </div>
-                <div class="project_content">
-                    <h2><i class='bx bx-folder'></i> Tractor Rental Platform</h2>
-                    <p>A web platform that connects tractor owners with farmers who need equipment, replacing phone-call and word-of-mouth booking with location- and date-based search. Includes a conflict-free booking engine that prevents double-booking, and an owner dashboard for tracking listings, bookings, and revenue.</p>
-                    <div class="tags"><span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span></div>
-                    <a href="#projects6">View Project <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-            <div class="project_card">
-                <div class="project_thumb project_thumb--1">
-                    <i class='bx bx-microphone-alt'></i>
-                    <img src="Developer.avif" alt="Voice Assistant project" onerror="this.style.display='none'">
-                </div>
-                <div class="project_content">
-                    <h2><i class='bx bx-folder'></i> Voice Assistant</h2>
-                    <p>A smart voice assistant that listens for voice commands and performs useful tasks through a simple, natural interface.</p>
-                    <div class="tags"><span>JavaScript</span><span>Web Speech API</span></div>
-                    <a href="#first6">View Project <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-            <div class="project_card">
-                <div class="project_thumb project_thumb--2">
-                    <i class='bx bx-traffic-cone'></i>
-                    <img src="dev.png" alt="Traffic Congestion Control project" onerror="this.style.display='none'">
-                </div>
-                <div class="project_content">
-                    <h2><i class='bx bx-folder'></i> Traffic Congestion Control</h2>
-                    <p>A traffic-management project that reduces congestion and improves road flow using smart control logic.</p>
-                    <div class="tags"><span>Java</span><span>Algorithms</span></div>
-                    <a href="#services6">View Project <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-            <div class="project_card">
-                <div class="project_thumb project_thumb--3">
-                    <i class='bx bx-palette'></i>
-                    <img src="Design.jpg" alt="Creative design work" onerror="this.style.display='none'">
-                </div>
-                <div class="project_content">
-                    <h2><i class='bx bx-folder'></i> Creative Design Work</h2>
-                    <p>Graphic design samples — banners, thumbnails, and social visuals made for clean, attractive branding.</p>
-                    <div class="tags"><span>Design</span><span>Branding</span></div>
-                    <a href="#projects6">View Project <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr>
-
-    <section class="contact_section" id="contact6">
-        <span class="text_gray" style="text-align:center;">// let's talk</span>
-        <h1>Contact Me</h1>
-        <div class="contact_container">
-            <div class="contact_info">
-                <h2>Let's Work Together</h2>
-                <p>If you want a website, design work, or project help, send me a message and I'll get back to you soon.</p>
-                <div class="contact_item">
-                    <strong><i class='bx bx-envelope'></i> Email</strong>
-                    <span>ashumaurya2597@gmail.com</span>
-                </div>
-                <div class="contact_item">
-                    <strong><i class='bx bx-phone'></i> Phone</strong>
-                    <span>+91 91706 61995</span>
-                </div>
-                <div class="contact_item">
-                    <strong><i class='bx bx-map'></i> Location</strong>
-                    <span>India</span>
-                </div>
-            </div>
-            <form class="contact_form" id="contactForm" novalidate>
-                <input type="text" id="name" placeholder="Your Name" required>
-                <small class="error_message" id="nameError"></small>
-
-                <input type="email" id="email" placeholder="Your Email" autocomplete="email" required>
-                <small class="error_message" id="emailError"></small>
-
-                <input type="tel" id="phone" placeholder="Your Phone Number" autocomplete="tel" required>
-                <small class="error_message" id="phoneError"></small>
-
-                <input type="text" id="subject" placeholder="Subject" required>
-                <small class="error_message" id="subjectError"></small>
-
-                <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
-                <small class="error_message" id="messageError"></small>
-
-                <p class="success_message" id="successMessage"></p>
-                <button type="submit" class="btn_primary">Send Message</button>
-            </form>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <div class="footer">
-        <div class="footer_brand">
-            <h3><span class="brace">&lt;</span>Ashu.dev<span class="brace">/&gt;</span></h3>
-            <p>Web Developer building clean interfaces and solid backends — one commit at a time.</p>
-        </div>
-        <div class="footer_links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="#first6">Home</a></li>
-                <li><a href="#about6">Log</a></li>
-                <li><a href="#services6">Services</a></li>
-                <li><a href="#projects6">Work</a></li>
-                <li><a href="#contact6">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer_connect">
-            <h4>Get in Touch</h4>
-            <ul>
-                <li><i class='bx bx-envelope'></i> ashumaurya2597@gmail.com</li>
-                <li><i class='bx bx-phone'></i> +91 91706 61995</li>
-                <li><a href="https://github.com/AshuMaurya1" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> github.com/AshuMaurya1</a></li>
-            </ul>
-        </div>
+        <!-- Mobile Hamburger Toggle -->
+        <button id="hamburger-btn" class="btn-hamburger" aria-label="Open navigation menu">
+          <i class='bx bx-menu-alt-right'></i>
+        </button>
+      </div>
     </div>
-    <div class="footer_right">
-        Copyright &#169; <span id="year"></span> Ashu Singh | All rights reserved
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-overlay" class="mobile-drawer-overlay"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <span class="brand-logo">ashu<span class="dot">.</span></span>
+      <button id="close-drawer-btn" class="btn-close-drawer" aria-label="Close navigation menu">
+        <i class='bx bx-x'></i>
+      </button>
     </div>
-</footer>
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About me</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#work" class="mobile-nav-link">My work</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid var(--border-card);">
+      <a href="#contact" class="btn-primary-gradient" style="width: 100%; justify-content: center;">
+        Connect with me <i class='bx bx-right-arrow-alt'></i>
+      </a>
+    </div>
+  </aside>
 
-<button class="top_button" id="topButton" aria-label="Back to top">
-    <i class="bx bx-up-arrow-alt"></i>
-</button>
+  <!-- Main Content Area -->
+  <main>
+    <!-- ======================================================================
+         1. Hero Section
+         ====================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container hero-content">
+        <!-- Profile Avatar Badge -->
+        <div class="hero-avatar-wrapper">
+          <img 
+            src="ashuicon.jpg" 
+            alt="Ashu Kumar Maurya Portrait" 
+            class="hero-avatar"
+            onerror="this.onerror=null; this.src='assets/eliana-avatar.svg';"
+          >
+        </div>
 
-<script src="Portfolio.js" defer></script>
+        <!-- Greeting -->
+        <div class="hero-greeting">
+          <span>Hi! I'm Ashu Kumar Maurya</span>
+          <span class="wave-emoji" aria-hidden="true">👋</span>
+        </div>
+
+        <!-- Main Headline in Serif -->
+        <h1 class="hero-title">
+          full-stack web developer<br>based in ghaziabad.
+        </h1>
+
+        <!-- Subtitle from Resume Summary -->
+        <p class="hero-description">
+          Full-Stack Web Developer and Computer Science undergraduate specializing in building responsive interfaces and secure RESTful APIs with React.js, Node.js, Express.js, MongoDB (MERN Stack), and Machine Learning with 300+ DSA algorithmic problems solved.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary-gradient">
+            <span>connect with me</span>
+            <i class='bx bx-right-arrow-alt'></i>
+          </a>
+          <a href="Ashu_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary-outline">
+            <span>my resume</span>
+            <i class='bx bx-download'></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. About Me Section
+         ====================================================================== -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <!-- Section Title Header -->
+        <div class="section-header">
+          <span class="section-eyebrow">Introduction</span>
+          <h2 class="section-title">About me</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Portrait Photo & Circular Rotating Badge -->
+          <div class="about-image-column">
+            <div class="about-image-card">
+              <img 
+                src="ashuicon.jpg" 
+                alt="Ashu Kumar Maurya" 
+                class="about-photo"
+                onerror="this.onerror=null; this.src='assets/eliana-portrait.svg';"
+              >
+            </div>
+
+            <!-- GreatStack Signature Circular Rotating Text Stamp Badge -->
+            <div class="spinning-badge-container">
+              <div class="spinning-badge">
+                <svg viewBox="0 0 160 160" class="spinning-svg" aria-hidden="true">
+                  <path id="badgeCirclePath" d="M 80, 80 m -56, 0 a 56,56 0 1,1 112,0 a 56,56 0 1,1 -112,0" fill="none" />
+                  <text class="spinning-text">
+                    <textPath href="#badgeCirclePath" startOffset="0%">
+                      FULL-STACK WEB DEVELOPER • MERN STACK &amp; DSA • 
+                    </textPath>
+                  </text>
+                </svg>
+                <div class="badge-center">
+                  <i class='bx bx-code-alt'></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Bio Paragraph, 3 Info Cards, Tools I Use -->
+          <div class="about-details">
+            <p class="about-bio-text">
+              I am an enthusiastic Full-Stack Web Developer and Computer Science &amp; Engineering undergraduate at Ajay Kumar Garg Engineering College, Ghaziabad. Skilled in building responsive, high-performance user interfaces and robust RESTful APIs with JavaScript, React.js, Node.js, Express.js, and MongoDB (MERN Stack). I have solved 300+ algorithmic problems on LeetCode with an active 200-day streak and possess practical experience applying Machine Learning to real-time systems.
+            </p>
+
+            <!-- 3 Stat / Info Cards from Resume -->
+            <div class="about-cards-grid">
+              <!-- Card 1: Languages & Tech -->
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class='bx bx-code-curly'></i>
+                </div>
+                <h3 class="stat-title">Languages</h3>
+                <p class="stat-desc">Java, JavaScript (ES6+), React.js, Node.js, Python, HTML/CSS</p>
+              </div>
+
+              <!-- Card 2: Education -->
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class='bx bx-graduation'></i>
+                </div>
+                <h3 class="stat-title">Education</h3>
+                <p class="stat-desc">B.Tech in CSE &mdash; AKGEC (2023&ndash;2027) | CGPA: 7.0/10</p>
+              </div>
+
+              <!-- Card 3: Problem Solving -->
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class='bx bx-trophy'></i>
+                </div>
+                <h3 class="stat-title">Problem Solving</h3>
+                <p class="stat-desc">300+ LeetCode Solved &bull; 200-Day Active Streak</p>
+              </div>
+            </div>
+
+            <!-- Tools I Use -->
+            <div class="tools-section">
+              <h4 class="tools-title">Tools I use</h4>
+              <div class="tools-row">
+                <div class="tool-badge" data-tooltip="VS Code">
+                  <img src="assets/vscode.svg" alt="VS Code icon">
+                </div>
+                <div class="tool-badge" data-tooltip="MongoDB">
+                  <img src="assets/mongodb.svg" alt="MongoDB icon">
+                </div>
+                <div class="tool-badge" data-tooltip="Git &amp; GitHub">
+                  <img src="assets/git.svg" alt="Git icon">
+                </div>
+                <div class="tool-badge" data-tooltip="Postman">
+                  <img src="assets/postman.svg" alt="Postman icon">
+                </div>
+                <div class="tool-badge" data-tooltip="Python">
+                  <img src="assets/python.svg" alt="Python icon">
+                </div>
+                <div class="tool-badge" data-tooltip="Firebase">
+                  <img src="assets/firebase.svg" alt="Firebase icon">
+                </div>
+                <div class="tool-badge" data-tooltip="Figma">
+                  <img src="assets/figma.svg" alt="Figma icon">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. Services Showcase Section
+         ====================================================================== -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-eyebrow">What I offer</span>
+          <h2 class="section-title">My services</h2>
+          <p class="section-subtitle">
+            Specialized in end-to-end web engineering, from responsive React interfaces and MERN architecture to RESTful APIs and intelligent machine learning integrations.
+          </p>
+        </div>
+
+        <!-- 4 Services Grid -->
+        <div class="services-grid">
+          <!-- Card 1: Full-Stack Web Dev -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i class='bx bx-layout'></i>
+            </div>
+            <h3 class="service-title">Full-Stack Web Dev</h3>
+            <p class="service-desc">
+              End-to-end web applications with React.js, Node.js, Express.js, and MongoDB (MERN Stack).
+            </p>
+            <span class="service-link">
+              <span>Read more</span>
+              <i class='bx bx-right-arrow-alt'></i>
+            </span>
+          </div>
+
+          <!-- Card 2: API & Backend Systems (Featured with soft purple/pink tint) -->
+          <div class="service-card featured">
+            <div class="service-icon-box">
+              <i class='bx bx-server'></i>
+            </div>
+            <h3 class="service-title">API &amp; Backend Systems</h3>
+            <p class="service-desc">
+              Scalable RESTful APIs, JWT authentication, secure route guards, and relational/NoSQL database design.
+            </p>
+            <span class="service-link">
+              <span>Read more</span>
+              <i class='bx bx-right-arrow-alt'></i>
+            </span>
+          </div>
+
+          <!-- Card 3: UI/UX & Responsive Web -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i class='bx bx-mobile-alt'></i>
+            </div>
+            <h3 class="service-title">UI/UX &amp; Responsive Web</h3>
+            <p class="service-desc">
+              Mobile-first responsive layouts across 5+ screen resolutions with zero layout shifts and sub-300ms latency.
+            </p>
+            <span class="service-link">
+              <span>Read more</span>
+              <i class='bx bx-right-arrow-alt'></i>
+            </span>
+          </div>
+
+          <!-- Card 4: ML & Smart Systems -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i class='bx bx-brain'></i>
+            </div>
+            <h3 class="service-title">ML &amp; Smart Systems</h3>
+            <p class="service-desc">
+              Predictive models and dynamic automation algorithms using Python, FastAPI, Random Forest, and XGBoost.
+            </p>
+            <span class="service-link">
+              <span>Read more</span>
+              <i class='bx bx-right-arrow-alt'></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. Work / Portfolio Showcase Section (Resume Projects)
+         ====================================================================== -->
+    <section id="work" class="work-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-eyebrow">My portfolio</span>
+          <h2 class="section-title">My latest work</h2>
+          <p class="section-subtitle">
+            Explore real-world engineering projects featuring AI congestion predictions, real-time voice assistants, MERN rental platforms, and algorithmic solutions.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ai-ml">AI / ML</button>
+          <button class="filter-btn" data-filter="mern-stack">MERN Stack</button>
+          <button class="filter-btn" data-filter="javascript">JavaScript</button>
+          <button class="filter-btn" data-filter="dsa">Problem Solving</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-grid">
+          <!-- Card 1: AI Traffic Congestion Prediction -->
+          <div class="project-card" data-category="ai-ml" data-project="traffic">
+            <div class="project-image-wrapper">
+              <img 
+                src="assets/project-traffic-ai.svg" 
+                alt="AI-Based Traffic Congestion Prediction System"
+              >
+            </div>
+            <div class="project-floating-bar">
+              <div class="project-info">
+                <span class="project-title">AI Traffic Congestion System</span>
+                <span class="project-category">AI / ML &bull; React.js &bull; FastAPI</span>
+              </div>
+              <div class="project-arrow-btn" aria-label="View project details">
+                <i class='bx bx-right-arrow-alt'></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Voice Assistant -->
+          <div class="project-card" data-category="javascript" data-project="voice">
+            <div class="project-image-wrapper">
+              <img 
+                src="assets/project-voice-assistant.svg" 
+                alt="Client-Side Voice Assistant"
+              >
+            </div>
+            <div class="project-floating-bar">
+              <div class="project-info">
+                <span class="project-title">Voice Assistant</span>
+                <span class="project-category">JavaScript &bull; Web Speech API</span>
+              </div>
+              <div class="project-arrow-btn" aria-label="View project details">
+                <i class='bx bx-right-arrow-alt'></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Agricultural Equipment Rental Platform -->
+          <div class="project-card" data-category="mern-stack" data-project="agri">
+            <div class="project-image-wrapper">
+              <img 
+                src="assets/project-agri-rental.svg" 
+                alt="Agricultural Equipment Rental Platform"
+              >
+            </div>
+            <div class="project-floating-bar">
+              <div class="project-info">
+                <span class="project-title">Agricultural Equipment Rental</span>
+                <span class="project-category">MERN Stack &bull; JWT &bull; REST API</span>
+              </div>
+              <div class="project-arrow-btn" aria-label="View project details">
+                <i class='bx bx-right-arrow-alt'></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: LeetCode & Problem Solving -->
+          <div class="project-card" data-category="dsa" data-project="leetcode">
+            <div class="project-image-wrapper">
+              <img 
+                src="assets/project-leetcode-dsa.svg" 
+                alt="LeetCode 300+ Algorithmic Solutions"
+              >
+            </div>
+            <div class="project-floating-bar">
+              <div class="project-info">
+                <span class="project-title">LeetCode 300+ Problems</span>
+                <span class="project-category">Java &bull; DSA &bull; 200-Day Streak</span>
+              </div>
+              <div class="project-arrow-btn" aria-label="View project details">
+                <i class='bx bx-right-arrow-alt'></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Extra Card 5: Full Stack Training Certification (Revealed on 'Show more') -->
+          <div class="project-card extra-project" data-category="mern-stack" data-project="training" style="display: none; opacity: 0;">
+            <div class="project-image-wrapper">
+              <img 
+                src="assets/project-1.svg" 
+                alt="Full Stack Job-Oriented Training"
+              >
+            </div>
+            <div class="project-floating-bar">
+              <div class="project-info">
+                <span class="project-title">Full Stack Web Certification</span>
+                <span class="project-category">CodeSquadz &bull; AKGEC Training</span>
+              </div>
+              <div class="project-arrow-btn" aria-label="View project details">
+                <i class='bx bx-right-arrow-alt'></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Extra Card 6: AACAR 9.0 Automotive Workshop (Revealed on 'Show more') -->
+          <div class="project-card extra-project" data-category="dsa" data-project="aacar" style="display: none; opacity: 0;">
+            <div class="project-image-wrapper">
+              <img 
+                src="assets/project-4.svg" 
+                alt="AACAR 9.0 Automotive Technology"
+              >
+            </div>
+            <div class="project-floating-bar">
+              <div class="project-info">
+                <span class="project-title">AACAR 9.0 Automotive Tech</span>
+                <span class="project-category">SAE India &bull; Bosch JCC</span>
+              </div>
+              <div class="project-arrow-btn" aria-label="View project details">
+                <i class='bx bx-right-arrow-alt'></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Centered Show More Action Button -->
+        <div class="show-more-wrapper">
+          <button id="show-more-btn" class="btn-show-more">
+            <span>Show more</span>
+            <i class='bx bx-right-arrow-alt'></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. Contact Section ("Get in touch")
+         ====================================================================== -->
+    <section id="contact" class="contact-section">
+      <!-- Subtle warm ambient lighting glow -->
+      <div class="contact-ambient" aria-hidden="true"></div>
+
+      <div class="container contact-form-wrapper">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-eyebrow">Connect with me</span>
+          <h2 class="section-title">Get in touch</h2>
+          <p class="section-subtitle">
+            I'd love to hear from you! Whether you have an internship or full-time opportunity, project collaboration, or any questions, please feel free to reach out.
+          </p>
+        </div>
+
+        <!-- Contact Quick Info Bar -->
+        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 30px; font-size: 0.92rem; color: var(--text-secondary);">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <i class='bx bx-envelope' style="color: var(--accent-pink); font-size: 1.15rem;"></i>
+            <a href="mailto:ashumaurya2597@gmail.com" style="color: inherit;">ashumaurya2597@gmail.com</a>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <i class='bx bx-phone' style="color: var(--accent-pink); font-size: 1.15rem;"></i>
+            <a href="tel:+919170661995" style="color: inherit;">+91-9170661995</a>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <i class='bx bx-map-pin' style="color: var(--accent-pink); font-size: 1.15rem;"></i>
+            <span>Ghaziabad, Uttar Pradesh</span>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="user-name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="user-email" placeholder="Enter your email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea id="user-message" placeholder="Enter your message" required></textarea>
+          </div>
+          <div class="form-submit-wrapper">
+            <button type="submit" class="btn-submit">
+              <span>Submit now</span>
+              <i class='bx bx-right-arrow-alt'></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       6. Footer
+       ====================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <a href="#home" class="brand-logo footer-logo" aria-label="Footer Home">
+          ashu<span class="dot">.</span>
+        </a>
+        <a href="mailto:ashumaurya2597@gmail.com" class="footer-email">
+          <i class='bx bx-envelope'></i>
+          <span>ashumaurya2597@gmail.com</span>
+        </a>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Ashu Kumar Maurya. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="https://github.com/AshuMaurya1" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i> LinkedIn</a></li>
+          <li><a href="https://leetcode.com" target="_blank" rel="noopener noreferrer"><i class='bx bx-code'></i> LeetCode</a></li>
+          <li><a href="Ashu_Resume.pdf" target="_blank" rel="noopener noreferrer"><i class='bx bx-file'></i> Resume</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="btn-back-to-top" aria-label="Back to top">
+    <i class='bx bx-up-arrow-alt'></i>
+  </button>
+
+  <!-- Interactive Modal Overlay (Service Details / Resume Project Deep-Dive) -->
+  <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-modal="true">
+      <button id="modal-close-btn" class="btn-close-modal" aria-label="Close dialog">
+        <i class='bx bx-x'></i>
+      </button>
+      <h3 id="modal-title" style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 16px; color: var(--text-primary);">Detail</h3>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast Alert Notification -->
+  <div id="toast-notification" class="toast-notification" role="status" aria-live="polite">
+    <i class='bx bx-check-circle' style="font-size: 1.3rem;"></i>
+    <span class="toast-text">Thank you! Your message has been sent successfully.</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="Portfolio.js"></script>
 </body>
 </html>

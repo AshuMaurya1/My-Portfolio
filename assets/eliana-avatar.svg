@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="av-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="100%" stop-color="#fed7aa"/>
+    </linearGradient>
+    <linearGradient id="av-hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b1f14"/>
+      <stop offset="100%" stop-color="#24120a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#av-bg)"/>
+  <!-- Portrait avatar -->
+  <path d="M45 200 C 50 145, 75 130, 100 130 C 125 130, 150 145, 155 200 Z" fill="#374151"/>
+  <ellipse cx="100" cy="85" rx="42" ry="50" fill="#fed7aa"/>
+  <ellipse cx="100" cy="75" rx="50" ry="46" fill="url(#av-hair)"/>
+  <!-- Front hair curls -->
+  <path d="M60 70 Q 75 40 100 40 Q 125 40 140 70 Q 145 110 135 125 Q 130 90 120 70 Q 100 65 80 70 Q 70 90 65 125 Z" fill="url(#av-hair)"/>
+  <!-- Face features -->
+  <ellipse cx="88" cy="88" rx="4" ry="3" fill="#1f2937"/>
+  <ellipse cx="112" cy="88" rx="4" ry="3" fill="#1f2937"/>
+  <path d="M92 108 Q 100 116 108 108" stroke="#e11d48" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

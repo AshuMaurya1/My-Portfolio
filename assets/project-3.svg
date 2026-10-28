@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p3-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#p3-bg)"/>
+
+  <!-- Warm studio background elements -->
+  <circle cx="160" cy="180" r="100" fill="#fed7aa" opacity="0.3"/>
+  <rect x="420" y="40" width="80" height="180" rx="40" fill="#cbd5e1" opacity="0.4"/>
+
+  <!-- Desktop Monitor / Screen -->
+  <g transform="translate(180, 40)" filter="url(#shadow3)">
+    <!-- Monitor Bezel -->
+    <rect x="0" y="0" width="340" height="230" rx="14" fill="#0f172a"/>
+    <rect x="145" y="230" width="50" height="60" fill="#94a3b8"/>
+    <rect x="110" y="285" width="120" height="10" rx="5" fill="#64748b"/>
+    <!-- Screen Content -->
+    <rect x="8" y="8" width="324" height="214" rx="8" fill="#ffffff"/>
+    
+    <!-- Website header -->
+    <text x="24" y="32" fill="#0f172a" font-family="'Ovo', serif" font-size="14" font-weight="700">LENS &amp; LIGHT.</text>
+    <text x="180" y="30" fill="#64748b" font-family="'Outfit', sans-serif" font-size="9">PORTFOLIO</text>
+    <text x="235" y="30" fill="#64748b" font-family="'Outfit', sans-serif" font-size="9">GALLERY</text>
+    <text x="280" y="30" fill="#64748b" font-family="'Outfit', sans-serif" font-size="9">CONTACT</text>
+    <line x1="8" y1="42" x2="332" y2="42" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Hero Photography Grid -->
+    <rect x="20" y="55" width="170" height="150" rx="8" fill="#f1f5f9"/>
+    <!-- Image placeholder stylized -->
+    <path d="M20 150 Q 80 90 140 140 T 190 120 L 190 205 L 20 205 Z" fill="#94a3b8" opacity="0.5"/>
+    <circle cx="60" cy="90" r="14" fill="#fbbf24" opacity="0.7"/>
+    <text x="32" y="190" fill="#0f172a" font-family="'Ovo', serif" font-size="11" font-weight="600">Alps Expedition</text>
+
+    <!-- Side cards -->
+    <rect x="200" y="55" width="115" height="70" rx="8" fill="#e2e8f0"/>
+    <text x="210" y="105" fill="#334155" font-family="'Outfit', sans-serif" font-size="9" font-weight="600">Portraits '25</text>
+    
+    <rect x="200" y="135" width="115" height="70" rx="8" fill="#cbd5e1"/>
+    <text x="210" y="185" fill="#334155" font-family="'Outfit', sans-serif" font-size="9" font-weight="600">Urban Light</text>
+  </g>
+
+  <!-- Modern Camera on desk -->
+  <g transform="translate(60, 160)" filter="url(#shadow3)">
+    <!-- Camera Body -->
+    <rect x="0" y="40" width="140" height="90" rx="14" fill="#1e293b"/>
+    <rect x="20" y="24" width="45" height="18" rx="4" fill="#334155"/>
+    <rect x="85" y="28" width="30" height="14" rx="4" fill="#dc2626"/>
+    <!-- Lens -->
+    <circle cx="70" cy="85" r="38" fill="#0f172a" stroke="#475569" stroke-width="6"/>
+    <circle cx="70" cy="85" r="26" fill="#1e293b"/>
+    <circle cx="70" cy="85" r="16" fill="#0284c7" opacity="0.7"/>
+    <circle cx="65" cy="80" r="5" fill="#fff" opacity="0.8"/>
+  </g>
+
+  <!-- Desk Coffee Cup / Plant -->
+  <g transform="translate(480, 260)">
+    <rect x="15" y="0" width="35" height="45" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <ellipse cx="32" cy="0" rx="17" ry="6" fill="#78350f"/>
+    <!-- Coffee steam -->
+    <path d="M28 -6 Q 25 -14 30 -20" stroke="#cbd5e1" stroke-width="2" fill="none"/>
+    <path d="M36 -6 Q 39 -14 34 -20" stroke="#cbd5e1" stroke-width="2" fill="none"/>
+  </g>
+</svg>
