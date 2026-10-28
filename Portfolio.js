@@ -1,12 +1,13 @@
 /**
- * ASHU KUMAR MAURYA PORTFOLIO LOGIC
- * High-performance, accessible, vanilla JavaScript with Resume Integration
+ * ASHU KUMAR MAURYA — EXECUTIVE SOFTWARE ENGINEER PORTFOLIO LOGIC
+ * High-performance, accessible, vanilla JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // Elements
   const html = document.documentElement;
   const header = document.querySelector('header');
+  const scrollProgressBar = document.getElementById('scroll-progress');
   const themeToggleBtn = document.getElementById('theme-toggle');
   const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
   const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const projectCards = document.querySelectorAll('.project-card');
   const showMoreBtn = document.getElementById('show-more-btn');
   const contactForm = document.getElementById('contact-form');
+  const copyEmailBtn = document.getElementById('copy-email-btn');
   const backToTopBtn = document.getElementById('back-to-top');
   const toast = document.getElementById('toast-notification');
   const modalOverlay = document.getElementById('modal-overlay');
@@ -39,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       applyTheme(newTheme);
       localStorage.setItem('ashu_portfolio_theme', newTheme);
+      showToast(`Switched to ${newTheme} mode`);
     });
   }
 
@@ -59,10 +62,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     2. Header Scroll Effect & Active Nav Link
+     2. Header Scroll Effect, Progress Bar & Active Nav Link
      -------------------------------------------------------------------------- */
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    // Top Scroll Progress Bar
+    if (scrollProgressBar && docHeight > 0) {
+      const progressPercent = (scrollY / docHeight) * 100;
+      scrollProgressBar.style.width = `${progressPercent}%`;
+    }
 
     // Header glass effect
     if (scrollY > 30) {
@@ -343,11 +353,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (data) {
         modalTitle.textContent = data.title;
         modalBody.innerHTML = `
-          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
-            <span style="font-size: 0.8rem; background: var(--icon-box-bg); color: var(--accent-pink); padding: 4px 10px; border-radius: 9999px; font-weight: 600;">
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;">
+            <span style="font-size: 0.8rem; background: var(--icon-box-bg); color: var(--accent-pink); padding: 4px 12px; border-radius: 9999px; font-weight: 600;">
               ${data.badge}
             </span>
-            <span style="font-size: 0.8rem; background: var(--bg-card); border: 1px solid var(--border-card); padding: 4px 10px; border-radius: 9999px; color: var(--text-muted);">
+            <span style="font-size: 0.8rem; background: var(--bg-card); border: 1px solid var(--border-card); padding: 4px 12px; border-radius: 9999px; color: var(--text-muted);">
               ${data.timeline}
             </span>
           </div>
@@ -355,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <ul style="padding-left: 20px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 20px;">
             ${data.bullets.map(b => `<li style="margin-bottom: 8px;">${b}</li>`).join('')}
           </ul>
-          <div style="display: flex; gap: 12px; margin-top: 14px;">
+          <div style="display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap;">
             <a href="https://github.com/AshuMaurya1" target="_blank" rel="noopener noreferrer" class="btn-primary-gradient" style="padding: 10px 22px; font-size: 0.88rem;">
               View on GitHub <i class='bx bx-right-arrow-alt'></i>
             </a>
@@ -391,8 +401,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Close modal on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
   /* --------------------------------------------------------------------------
-     8. Contact Form Submission & Toast Alert
+     8. 1-Click Copy Email to Clipboard
+     -------------------------------------------------------------------------- */
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', () => {
+      const email = 'ashumaurya2597@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const originalText = copyEmailBtn.innerHTML;
+        copyEmailBtn.innerHTML = `<i class='bx bx-check'></i> <span>Copied!</span>`;
+        showToast('Email address copied to clipboard! 📋');
+
+        setTimeout(() => {
+          copyEmailBtn.innerHTML = originalText;
+        }, 2500);
+      }).catch(() => {
+        showToast('Direct: ashumaurya2597@gmail.com');
+      });
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     9. Contact Form Submission & Toast Alert
      -------------------------------------------------------------------------- */
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -408,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
         contactForm.reset();
-        showToast('Thank you! Your message has been sent successfully.');
+        showToast('Thank you! Your message has been sent successfully. 🚀');
       }, 1000);
     });
   }

@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashu Kumar Maurya — Full-Stack Web Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Ashu Kumar Maurya, a Full-Stack Web Developer based in Ghaziabad, UP specializing in React.js, Node.js, Express, MongoDB (MERN Stack), and Machine Learning with 300+ DSA algorithmic problems solved.">
+  <title>Ashu Kumar Maurya — Full-Stack Web Developer &amp; Problem Solver</title>
+  <meta name="description" content="Professional portfolio of Ashu Kumar Maurya, Full-Stack Web Developer and Computer Science undergraduate specializing in React.js, Node.js, Express.js, MongoDB (MERN Stack), and Machine Learning with 300+ DSA algorithmic problems solved.">
   <meta name="author" content="Ashu Kumar Maurya">
   
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="ashuicon.jpg">
 
-  <!-- Google Fonts: Ovo (Serif) & Outfit (Modern Sans) -->
+  <!-- Google Fonts: Ovo (Serif) & Outfit (Modern Sans) & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Ovo&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
   <!-- Ambient Top Lighting Flare -->
   <div class="ambient-lighting" aria-hidden="true"></div>
 
@@ -37,9 +40,11 @@
       <nav class="nav-menu-wrapper" aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About me</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#timeline" class="nav-link">Journey</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#work" class="nav-link">My work</a></li>
+          <li><a href="#work" class="nav-link">Projects</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -77,8 +82,10 @@
     <ul class="mobile-nav-links">
       <li><a href="#home" class="mobile-nav-link">Home</a></li>
       <li><a href="#about" class="mobile-nav-link">About me</a></li>
+      <li><a href="#timeline" class="mobile-nav-link">Journey &amp; Education</a></li>
       <li><a href="#services" class="mobile-nav-link">Services</a></li>
-      <li><a href="#work" class="mobile-nav-link">My work</a></li>
+      <li><a href="#work" class="mobile-nav-link">Featured Projects</a></li>
+      <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
       <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
     </ul>
     <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid var(--border-card);">
@@ -91,10 +98,16 @@
   <!-- Main Content Area -->
   <main>
     <!-- ======================================================================
-         1. Hero Section
+         1. Hero Section (Elevated Executive First Impression)
          ====================================================================== -->
     <section id="home" class="hero-section">
       <div class="container hero-content">
+        <!-- Live Status Pill -->
+        <div class="hero-status-badge">
+          <span class="status-dot"></span>
+          <span>Available for SDE &amp; Full-Stack Opportunities</span>
+        </div>
+
         <!-- Profile Avatar Badge -->
         <div class="hero-avatar-wrapper">
           <img 
@@ -118,7 +131,7 @@
 
         <!-- Subtitle from Resume Summary -->
         <p class="hero-description">
-          Full-Stack Web Developer and Computer Science undergraduate specializing in building responsive interfaces and secure RESTful APIs with React.js, Node.js, Express.js, MongoDB (MERN Stack), and Machine Learning with 300+ DSA algorithmic problems solved.
+          Computer Science undergraduate at Ajay Kumar Garg Engineering College specializing in responsive user interfaces, scalable RESTful APIs with React.js, Node.js, Express.js, MongoDB (MERN Stack), and Machine Learning with 300+ DSA algorithmic problems solved.
         </p>
 
         <!-- CTA Action Buttons -->
@@ -128,9 +141,48 @@
             <i class='bx bx-right-arrow-alt'></i>
           </a>
           <a href="Ashu_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary-outline">
-            <span>my resume</span>
+            <span>download resume</span>
             <i class='bx bx-download'></i>
           </a>
+        </div>
+
+        <!-- Hero Quick Socials Ribbon -->
+        <div class="hero-socials">
+          <a href="https://github.com/AshuMaurya1" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub">
+            <i class='bx bxl-github'></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn">
+            <i class='bx bxl-linkedin'></i>
+          </a>
+          <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LeetCode Profile">
+            <i class='bx bx-code'></i>
+          </a>
+          <a href="mailto:ashumaurya2597@gmail.com" class="hero-social-link" title="Email Direct">
+            <i class='bx bx-envelope'></i>
+          </a>
+          <a href="tel:+919170661995" class="hero-social-link" title="Call Direct">
+            <i class='bx bx-phone'></i>
+          </a>
+        </div>
+
+        <!-- Hero Key Metrics Bento Strip -->
+        <div class="hero-metrics-strip">
+          <div class="metric-pill">
+            <div class="metric-number gradient">300+</div>
+            <div class="metric-label">LeetCode Solved</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-number">200+</div>
+            <div class="metric-label">Active Day Streak 🔥</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-number">MERN</div>
+            <div class="metric-label">Full-Stack Core</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-number">AKGEC</div>
+            <div class="metric-label">B.Tech CSE '27</div>
+          </div>
         </div>
       </div>
     </section>
@@ -179,7 +231,7 @@
           <!-- Right Column: Bio Paragraph, 3 Info Cards, Tools I Use -->
           <div class="about-details">
             <p class="about-bio-text">
-              I am an enthusiastic Full-Stack Web Developer and Computer Science &amp; Engineering undergraduate at Ajay Kumar Garg Engineering College, Ghaziabad. Skilled in building responsive, high-performance user interfaces and robust RESTful APIs with JavaScript, React.js, Node.js, Express.js, and MongoDB (MERN Stack). I have solved 300+ algorithmic problems on LeetCode with an active 200-day streak and possess practical experience applying Machine Learning to real-time systems.
+              I am an energetic Full-Stack Web Developer and Computer Science &amp; Engineering undergraduate at Ajay Kumar Garg Engineering College, Ghaziabad. Skilled in building responsive, high-performance user interfaces and robust RESTful APIs with JavaScript, React.js, Node.js, Express.js, and MongoDB (MERN Stack). I have solved 300+ algorithmic problems on LeetCode with an active 200-day streak and possess practical experience applying Machine Learning to real-time systems.
             </p>
 
             <!-- 3 Stat / Info Cards from Resume -->
@@ -190,7 +242,7 @@
                   <i class='bx bx-code-curly'></i>
                 </div>
                 <h3 class="stat-title">Languages</h3>
-                <p class="stat-desc">Java, JavaScript (ES6+), React.js, Node.js, Python, HTML/CSS</p>
+                <p class="stat-desc">Java, JavaScript (ES6+), React.js, Node.js, Python, HTML5, CSS3</p>
               </div>
 
               <!-- Card 2: Education -->
@@ -208,16 +260,28 @@
                   <i class='bx bx-trophy'></i>
                 </div>
                 <h3 class="stat-title">Problem Solving</h3>
-                <p class="stat-desc">300+ LeetCode Solved &bull; 200-Day Active Streak</p>
+                <p class="stat-desc">300+ LeetCode Solved &bull; 200-Day Active Daily Streak</p>
               </div>
             </div>
 
             <!-- Tools I Use -->
             <div class="tools-section">
-              <h4 class="tools-title">Tools I use</h4>
+              <h4 class="tools-title">Tools &amp; Technologies I Use</h4>
               <div class="tools-row">
-                <div class="tool-badge" data-tooltip="VS Code">
-                  <img src="assets/vscode.svg" alt="VS Code icon">
+                <div class="tool-badge" data-tooltip="React.js">
+                  <img src="assets/react.svg" alt="React icon">
+                </div>
+                <div class="tool-badge" data-tooltip="JavaScript">
+                  <img src="assets/javascript.svg" alt="JavaScript icon">
+                </div>
+                <div class="tool-badge" data-tooltip="Java">
+                  <img src="assets/java.svg" alt="Java icon">
+                </div>
+                <div class="tool-badge" data-tooltip="Python">
+                  <img src="assets/python.svg" alt="Python icon">
+                </div>
+                <div class="tool-badge" data-tooltip="Tailwind CSS">
+                  <img src="assets/tailwind.svg" alt="Tailwind icon">
                 </div>
                 <div class="tool-badge" data-tooltip="MongoDB">
                   <img src="assets/mongodb.svg" alt="MongoDB icon">
@@ -228,8 +292,11 @@
                 <div class="tool-badge" data-tooltip="Postman">
                   <img src="assets/postman.svg" alt="Postman icon">
                 </div>
-                <div class="tool-badge" data-tooltip="Python">
-                  <img src="assets/python.svg" alt="Python icon">
+                <div class="tool-badge" data-tooltip="VS Code">
+                  <img src="assets/vscode.svg" alt="VS Code icon">
+                </div>
+                <div class="tool-badge" data-tooltip="LeetCode">
+                  <img src="assets/leetcode.svg" alt="LeetCode icon">
                 </div>
                 <div class="tool-badge" data-tooltip="Firebase">
                   <img src="assets/firebase.svg" alt="Firebase icon">
@@ -245,7 +312,99 @@
     </section>
 
     <!-- ======================================================================
-         3. Services Showcase Section
+         3. Education & Career Journey Timeline (Professional Section)
+         ====================================================================== -->
+    <section id="timeline" class="timeline-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Milestones</span>
+          <h2 class="section-title">Education &amp; Journey</h2>
+          <p class="section-subtitle">
+            A chronological timeline of academic achievements, technical workshops, and professional software engineering training.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Full Stack Web Development Certification</h3>
+                <span class="timeline-date-badge">Jun 2026 &ndash; Jul 2026</span>
+              </div>
+              <p class="timeline-institution">CodeSquadz &amp; AppSquadz &bull; In collaboration with AKGEC</p>
+              <p class="timeline-desc">
+                Completed an intensive 6-week job-oriented training covering advanced MERN architecture, secure JWT authentication, state management, and Git-based team development workflows.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-title">AACAR 9.0 Automotive Workshop</h3>
+                <span class="timeline-date-badge">Technical Training</span>
+              </div>
+              <p class="timeline-institution">SAE India Collegiate Club &amp; Bosch JCC</p>
+              <p class="timeline-desc">
+                Selected for AACAR 9.0 and completed 16 hours of specialized technical training in Automotive Technology, real-time sensor logic, and embedded control systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Bachelor of Technology &mdash; Computer Science &amp; Engineering</h3>
+                <span class="timeline-date-badge">2023 &ndash; 2027</span>
+              </div>
+              <p class="timeline-institution">Ajay Kumar Garg Engineering College, Ghaziabad &bull; CGPA: 7.0/10</p>
+              <p class="timeline-desc">
+                Relevant Coursework: Data Structures &amp; Algorithms, Web Development, Operating Systems, Computer Architecture, and Object-Oriented Programming (Java).
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Intermediate (Class XII)</h3>
+                <span class="timeline-date-badge">2021 &ndash; 2022</span>
+              </div>
+              <p class="timeline-institution">Maa Vindhyavasini Inter College, Paanpi, Sonbhadra &bull; 60.0%</p>
+              <p class="timeline-desc">
+                Completed senior secondary education focusing on Physics, Chemistry, and Mathematics.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 5 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-title">High School (Class X)</h3>
+                <span class="timeline-date-badge">2019 &ndash; 2020</span>
+              </div>
+              <p class="timeline-institution">Maa Vindhyavasini Inter College, Paanpi, Sonbhadra &bull; 64.5%</p>
+              <p class="timeline-desc">
+                Built foundational science and mathematics core competencies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. Services Showcase Section
          ====================================================================== -->
     <section id="services" class="services-section">
       <div class="container">
@@ -324,14 +483,14 @@
     </section>
 
     <!-- ======================================================================
-         4. Work / Portfolio Showcase Section (Resume Projects)
+         5. Work / Portfolio Showcase Section (Resume Projects)
          ====================================================================== -->
     <section id="work" class="work-section">
       <div class="container">
         <!-- Section Header -->
         <div class="section-header">
           <span class="section-eyebrow">My portfolio</span>
-          <h2 class="section-title">My latest work</h2>
+          <h2 class="section-title">Featured Projects</h2>
           <p class="section-subtitle">
             Explore real-world engineering projects featuring AI congestion predictions, real-time voice assistants, MERN rental platforms, and algorithmic solutions.
           </p>
@@ -339,7 +498,7 @@
 
         <!-- Category Filter Tabs -->
         <div class="filter-tabs">
-          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn active" data-filter="all">All (4)</button>
           <button class="filter-btn" data-filter="ai-ml">AI / ML</button>
           <button class="filter-btn" data-filter="mern-stack">MERN Stack</button>
           <button class="filter-btn" data-filter="javascript">JavaScript</button>
@@ -474,7 +633,80 @@
     </section>
 
     <!-- ======================================================================
-         5. Contact Section ("Get in touch")
+         6. Honors & Achievements Bento Grid (New Executive Section)
+         ====================================================================== -->
+    <section id="achievements" class="bento-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Recognition</span>
+          <h2 class="section-title">Honors &amp; Certifications</h2>
+          <p class="section-subtitle">
+            Demonstrated consistency, rigorous algorithmic practice, and hands-on professional certifications.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento Card 1 (Highlight - LeetCode) -->
+          <div class="bento-card highlight">
+            <div class="bento-header">
+              <div class="bento-icon" style="background: rgba(255, 161, 22, 0.15); color: #ffa116;">
+                <i class='bx bx-fire'></i>
+              </div>
+              <h3 class="bento-title">LeetCode Consistency: 300+ Problems &amp; 200-Day Streak</h3>
+              <span class="bento-badge">Active Streak</span>
+            </div>
+            <p class="bento-body">
+              Maintained a 200-day daily problem-solving streak on LeetCode covering Arrays, Linked Lists, Trees, Dynamic Programming, and Memoization algorithms in Java with optimized time &amp; space complexity.
+            </p>
+          </div>
+
+          <!-- Bento Card 2: CodeSquadz Full Stack -->
+          <div class="bento-card">
+            <div class="bento-header">
+              <div class="bento-icon" style="background: rgba(184, 32, 230, 0.12); color: #c026d3;">
+                <i class='bx bx-certification'></i>
+              </div>
+              <h3 class="bento-title">Full Stack Training</h3>
+              <span class="bento-badge" style="background: rgba(192, 38, 211, 0.12); color: #c026d3;">Certified</span>
+            </div>
+            <p class="bento-body">
+              6-Week Job-Oriented Training by CodeSquadz &amp; AppSquadz in collaboration with AKGEC, mastering production MERN architectures.
+            </p>
+          </div>
+
+          <!-- Bento Card 3: AACAR 9.0 -->
+          <div class="bento-card">
+            <div class="bento-header">
+              <div class="bento-icon" style="background: rgba(2, 132, 199, 0.12); color: #0284c7;">
+                <i class='bx bx-chip'></i>
+              </div>
+              <h3 class="bento-title">AACAR 9.0 Workshop</h3>
+              <span class="bento-badge" style="background: rgba(2, 132, 199, 0.12); color: #0284c7;">Selected</span>
+            </div>
+            <p class="bento-body">
+              Completed 16 hours of intensive automotive &amp; embedded system training hosted by SAE India Collegiate Club &amp; Bosch JCC.
+            </p>
+          </div>
+
+          <!-- Bento Card 4: Technical Coursework (Highlight) -->
+          <div class="bento-card highlight">
+            <div class="bento-header">
+              <div class="bento-icon" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
+                <i class='bx bx-book-open'></i>
+              </div>
+              <h3 class="bento-title">100+ Hours Structured DSA &amp; React Specialization</h3>
+              <span class="bento-badge">Completed</span>
+            </div>
+            <p class="bento-body">
+              Completed 100+ hours of structured Data Structures &amp; Algorithms training (College Wallah) and full-stack React.js specialization (Love Babbar), mastering modern hooks, context API, and algorithm paradigms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. Contact Section ("Get in touch")
          ====================================================================== -->
     <section id="contact" class="contact-section">
       <!-- Subtle warm ambient lighting glow -->
@@ -490,19 +722,22 @@
           </p>
         </div>
 
-        <!-- Contact Quick Info Bar -->
-        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 30px; font-size: 0.92rem; color: var(--text-secondary);">
-          <div style="display: flex; align-items: center; gap: 6px;">
-            <i class='bx bx-envelope' style="color: var(--accent-pink); font-size: 1.15rem;"></i>
-            <a href="mailto:ashumaurya2597@gmail.com" style="color: inherit;">ashumaurya2597@gmail.com</a>
+        <!-- 3 Quick Contact Cards -->
+        <div class="contact-quick-cards">
+          <div class="contact-quick-card">
+            <div class="contact-quick-icon"><i class='bx bx-envelope'></i></div>
+            <div class="contact-quick-label">Email Address</div>
+            <div class="contact-quick-val">ashumaurya2597@gmail.com</div>
           </div>
-          <div style="display: flex; align-items: center; gap: 6px;">
-            <i class='bx bx-phone' style="color: var(--accent-pink); font-size: 1.15rem;"></i>
-            <a href="tel:+919170661995" style="color: inherit;">+91-9170661995</a>
+          <div class="contact-quick-card">
+            <div class="contact-quick-icon"><i class='bx bx-phone'></i></div>
+            <div class="contact-quick-label">Phone Direct</div>
+            <div class="contact-quick-val">+91-9170661995</div>
           </div>
-          <div style="display: flex; align-items: center; gap: 6px;">
-            <i class='bx bx-map-pin' style="color: var(--accent-pink); font-size: 1.15rem;"></i>
-            <span>Ghaziabad, Uttar Pradesh</span>
+          <div class="contact-quick-card">
+            <div class="contact-quick-icon"><i class='bx bx-map-pin'></i></div>
+            <div class="contact-quick-label">Location</div>
+            <div class="contact-quick-val">Ghaziabad, Uttar Pradesh</div>
           </div>
         </div>
 
@@ -524,6 +759,10 @@
               <span>Submit now</span>
               <i class='bx bx-right-arrow-alt'></i>
             </button>
+            <button type="button" id="copy-email-btn" class="btn-copy-email">
+              <i class='bx bx-copy'></i>
+              <span>Copy Email</span>
+            </button>
           </div>
         </form>
       </div>
@@ -531,7 +770,7 @@
   </main>
 
   <!-- ======================================================================
-       6. Footer
+       8. Footer
        ====================================================================== -->
   <footer>
     <div class="container">
