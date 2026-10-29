@@ -119,6 +119,8 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -129,6 +131,8 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
   transition: background-color 0.35s ease, color 0.35s ease;
 }
 
@@ -396,16 +400,19 @@ header.scrolled {
 .mobile-drawer {
   position: fixed;
   top: 0;
-  right: -320px;
-  width: 300px;
+  right: -360px;
+  width: min(320px, 86vw);
   height: 100vh;
+  height: 100dvh;
   background: var(--bg-primary);
   border-left: 1px solid var(--border-card);
   box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
   z-index: 1001;
-  padding: 28px 24px;
+  padding: clamp(20px, 4vw, 28px) clamp(16px, 4vw, 24px);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1429,6 +1436,7 @@ header.scrolled {
 .contact-section {
   padding: 90px 0;
   position: relative;
+  overflow: hidden;
 }
 
 .contact-ambient {
@@ -1436,8 +1444,8 @@ header.scrolled {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 700px;
-  height: 500px;
+  width: min(700px, 92vw);
+  height: min(500px, 70vh);
   background: var(--contact-glow);
   pointer-events: none;
   z-index: 0;
@@ -1705,27 +1713,32 @@ footer {
 /* Toast Message */
 .toast-notification {
   position: fixed;
-  bottom: 30px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(100px);
   background: #10b981;
   color: #ffffff;
-  padding: 14px 28px;
+  padding: 12px 22px;
   border-radius: 9999px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 10px;
   box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
-  z-index: 1000;
+  z-index: 2500;
   opacity: 0;
+  max-width: calc(100vw - 32px);
+  width: max-content;
+  text-align: center;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
 }
 
 .toast-notification.active {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* Modal Popup */
@@ -1735,10 +1748,11 @@ footer {
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 2000;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 16px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1754,13 +1768,15 @@ footer {
   border-radius: 24px;
   max-width: 600px;
   width: 100%;
-  padding: 32px;
+  padding: clamp(20px, 4vw, 32px);
   position: relative;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   transform: scale(0.95);
   transition: transform 0.3s ease;
-  max-height: 90vh;
+  max-height: 88vh;
+  max-height: 88dvh;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-overlay.active .modal-container {
@@ -1783,29 +1799,54 @@ footer {
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   COMPREHENSIVE MULTI-DEVICE RESPONSIVE SYSTEM
+   Tested & optimized for 320px, 375px, 414px, 480px, 768px, 992px, 1200px+
+   Guarantees zero horizontal overflow, fluid typography & tactile mobile UX
    ========================================================================== */
 
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* --------------------------------------------------------------------------
+   1. Large Tablets & Small Laptops (<= 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 980px;
+  }
+
+  .nav-menu {
+    gap: 18px;
+    padding: 7px 20px;
+  }
+
+  .nav-menu li a {
+    font-size: 0.88rem;
+  }
+
+  .hero-title {
+    font-size: 3.35rem;
   }
 
   .about-grid {
-    grid-template-columns: 280px 1fr;
-    gap: 36px;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
   }
 
-  .bento-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .spinning-badge-container {
+    width: 120px;
+    height: 120px;
+    top: -18px;
+    right: -18px;
   }
 
-  .bento-card.highlight {
-    grid-column: span 2;
+  .spinning-text {
+    font-size: 9px;
   }
 }
 
-@media (max-width: 860px) {
+/* --------------------------------------------------------------------------
+   2. Medium Screens & Landscape Tablets (<= 992px)
+   Navbar collapses smoothly into drawer before collision
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
   .nav-menu-wrapper {
     display: none;
   }
@@ -1814,45 +1855,198 @@ footer {
     display: flex;
   }
 
+  .hero-section {
+    padding-top: 135px;
+    padding-bottom: 55px;
+  }
+
   .hero-title {
-    font-size: 2.85rem;
+    font-size: 2.9rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 600px;
   }
 
   .hero-metrics-strip {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 620px;
+    gap: 14px;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
-    max-width: 480px;
+    max-width: 540px;
     margin: 0 auto;
     text-align: center;
+    gap: 40px;
   }
 
   .about-image-column {
     margin: 0 auto;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
   }
 
   .spinning-badge-container {
-    right: -10px;
-    top: -10px;
+    right: -12px;
+    top: -12px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .spinning-text {
+    font-size: 8.6px;
+    letter-spacing: 2px;
+  }
+
+  .badge-center {
+    width: 38px;
+    height: 38px;
+    font-size: 1.15rem;
+  }
+
+  .about-bio-text {
+    text-align: center;
   }
 
   .about-cards-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
   }
 
   .tools-row {
     justify-content: center;
   }
 
+  .timeline-container {
+    max-width: 700px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
+    max-width: 580px;
+    margin: 0 auto 40px;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .bento-card.highlight {
+    grid-column: span 2;
   }
 
   .contact-quick-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Portrait Tablets & Large Foldables (<= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 1.2px;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  header {
+    padding: 14px 0;
+  }
+
+  header.scrolled {
+    padding: 10px 0;
+  }
+
+  .brand-logo {
+    font-size: 1.6rem;
+  }
+
+  .hero-section {
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+
+  .hero-title {
+    font-size: 2.45rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .hero-avatar {
+    width: 78px;
+    height: 78px;
+  }
+
+  .hero-greeting {
+    font-size: 1.05rem;
+  }
+
+  .about-cards-grid {
     grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto 32px;
+  }
+
+  .about-bio-text {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .timeline-section {
+    padding: 60px 0;
+  }
+
+  .timeline-container::before {
+    left: 21px;
+  }
+
+  .timeline-marker {
+    left: 10px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .timeline-marker-inner {
+    width: 7px;
+    height: 7px;
+  }
+
+  .timeline-item {
+    padding-left: 52px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-card {
+    padding: 18px 22px;
+    border-radius: 16px;
+  }
+
+  .timeline-title {
+    font-size: 1.08rem;
   }
 
   .bento-grid {
@@ -1862,38 +2056,696 @@ footer {
   .bento-card.highlight {
     grid-column: span 1;
   }
-}
 
-@media (max-width: 640px) {
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .hero-title {
-    font-size: 2.25rem;
-  }
-
-  .services-grid {
+  .contact-quick-cards {
     grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto 32px;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
+  .footer-top {
+    margin-bottom: 30px;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 12px;
+    gap: 16px;
   }
 
   .footer-links {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 18px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Phablets & Standard Mobile Phones (<= 640px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  /* Compact header navigation on mobile */
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .btn-connect {
+    display: none; /* Mobile drawer features full gradient connect action button */
+  }
+
+  .hero-section {
+    padding-top: 105px;
+    padding-bottom: 40px;
+  }
+
+  .hero-status-badge {
+    font-size: 0.78rem;
+    padding: 6px 13px;
+    gap: 7px;
+    line-height: 1.35;
+    max-width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+  }
+
+  .hero-description {
+    font-size: 0.94rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+    padding: 0 4px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 310px;
+    margin: 0 auto 26px;
+    gap: 12px;
+  }
+
+  .btn-primary-gradient,
+  .btn-secondary-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 22px;
+    font-size: 0.94rem;
+  }
+
+  .hero-socials {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .hero-social-link {
+    width: 38px;
+    height: 38px;
+    font-size: 1.15rem;
   }
 
   .hero-metrics-strip {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    width: 100%;
+  }
+
+  .metric-pill {
+    padding: 11px 8px;
+    border-radius: 14px;
+  }
+
+  .metric-number {
+    font-size: 1.25rem;
+    margin-bottom: 2px;
+  }
+
+  .metric-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.3px;
+  }
+
+  /* About Me Section */
+  .about-section {
+    padding: 65px 0 45px;
+  }
+
+  .about-image-column {
+    max-width: 250px;
+  }
+
+  .about-image-card {
+    border-radius: 22px;
+  }
+
+  .spinning-badge-container {
+    width: 95px;
+    height: 95px;
+    top: -12px;
+    right: -8px;
+  }
+
+  .spinning-text {
+    font-size: 8.2px;
+    letter-spacing: 1.8px;
+  }
+
+  .badge-center {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .stat-card {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+
+  .tool-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .tool-badge img,
+  .tool-badge svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .tools-row {
+    gap: 10px;
+  }
+
+  /* Timeline */
+  .timeline-section {
+    padding: 50px 0;
+  }
+
+  .timeline-container::before {
+    left: 14px;
+  }
+
+  .timeline-marker {
+    left: 4px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-marker-inner {
+    width: 6px;
+    height: 6px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+    margin-bottom: 24px;
+  }
+
+  .timeline-card {
+    padding: 16px 16px;
+    border-radius: 14px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .timeline-date-badge {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+  }
+
+  .timeline-institution {
+    font-size: 0.88rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  /* Services */
+  .services-section {
+    padding: 60px 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    padding: 22px 20px;
+    border-radius: 18px;
+  }
+
+  .service-icon-box {
+    margin-bottom: 14px;
+  }
+
+  .service-desc {
+    margin-bottom: 18px;
+  }
+
+  /* Projects */
+  .work-section {
+    padding: 60px 0;
+  }
+
+  .filter-tabs {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .filter-btn {
+    padding: 7px 15px;
+    font-size: 0.82rem;
+  }
+
+  .project-card {
+    border-radius: 18px;
+    aspect-ratio: 16 / 11;
+  }
+
+  .project-floating-bar {
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    padding: 10px 14px;
+    border-radius: 14px;
+  }
+
+  .project-title {
+    font-size: 0.94rem;
+  }
+
+  .project-category {
+    font-size: 0.75rem;
+  }
+
+  .project-arrow-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+  }
+
+  /* Bento Achievements */
+  .bento-section {
+    padding: 50px 0;
+  }
+
+  .bento-card {
+    padding: 20px 18px;
+    border-radius: 18px;
+  }
+
+  .bento-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .bento-title {
+    font-size: 1.02rem;
+  }
+
+  .bento-badge {
+    margin-left: 0;
+  }
+
+  .bento-body {
+    font-size: 0.88rem;
+  }
+
+  /* Contact Form */
+  .contact-section {
+    padding: 60px 0;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* 16px font-size prevents iOS Safari from automatically zooming into inputs */
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+    padding: 13px 16px;
+  }
+
+  .form-submit-wrapper {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-submit,
+  .btn-copy-email {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+  }
+
+  /* Back to Top */
+  .btn-back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  /* Modal */
+  .modal-container {
+    padding: 22px 16px;
+    border-radius: 20px;
+    width: 95%;
+    max-height: 85vh;
+    max-height: 85dvh;
+  }
+
+  .btn-close-modal {
+    top: 14px;
+    right: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Compact Mobile Phones (<= 480px, e.g. iPhone SE, iPhone 12/13 Mini)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  header {
+    padding: 12px 0;
+  }
+
+  .brand-logo {
+    font-size: 1.45rem;
+  }
+
+  .btn-theme-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 1.15rem;
+  }
+
+  .btn-hamburger {
+    width: 36px;
+    height: 36px;
+    font-size: 1.45rem;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .section-title {
+    font-size: 2.05rem;
+  }
+
+  .hero-section {
+    padding-top: 96px;
+    padding-bottom: 36px;
+  }
+
+  .hero-status-badge {
+    font-size: 0.74rem;
+    padding: 5px 11px;
+    gap: 6px;
+  }
+
+  .hero-avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .hero-greeting {
+    font-size: 0.98rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+    line-height: 1.22;
+  }
+
+  .hero-description {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .about-image-column {
+    max-width: 220px;
+  }
+
+  .spinning-badge-container {
+    width: 85px;
+    height: 85px;
+    top: -10px;
+    right: -6px;
+  }
+
+  .spinning-text {
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+
+  .badge-center {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+
+  .tool-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+
+  .tool-badge img,
+  .tool-badge svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .tools-row {
+    gap: 8px;
+  }
+
+  .timeline-item {
+    padding-left: 36px;
+  }
+
+  .timeline-marker {
+    left: 2px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline-container::before {
+    left: 10px;
+  }
+
+  .timeline-card {
+    padding: 14px 14px;
+  }
+
+  .timeline-title {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    aspect-ratio: 16 / 11.5;
+  }
+
+  .project-floating-bar {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 8px 10px;
+  }
+
+  .project-title {
+    font-size: 0.88rem;
+  }
+
+  .project-category {
+    font-size: 0.72rem;
+  }
+
+  .project-arrow-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .contact-quick-val {
+    font-size: 0.82rem;
+  }
+
+  .btn-submit,
+  .btn-copy-email {
+    font-size: 0.92rem;
+    padding: 12px 18px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Ultra-Compact Mobile Screens (<= 360px, e.g. iPhone 5/SE 1st gen, Fold cover)
+   -------------------------------------------------------------------------- */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .brand-logo {
+    font-size: 1.35rem;
+  }
+
+  .hero-title {
+    font-size: 1.68rem;
+  }
+
+  .hero-greeting {
+    font-size: 0.92rem;
+  }
+
+  .metric-pill {
+    padding: 8px 6px;
+  }
+
+  .metric-number {
+    font-size: 1.15rem;
+  }
+
+  .metric-label {
+    font-size: 0.68rem;
+  }
+
+  .about-image-column {
+    max-width: 190px;
+  }
+
+  .spinning-badge-container {
+    width: 74px;
+    height: 74px;
+    top: -6px;
+    right: -4px;
+  }
+
+  .spinning-text {
+    font-size: 7.5px;
+    letter-spacing: 1.4px;
+  }
+
+  .badge-center {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+
+  .timeline-item {
+    padding-left: 28px;
+  }
+
+  .timeline-marker {
+    left: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-container::before {
+    left: 7px;
+  }
+
+  .timeline-card {
+    padding: 12px 10px;
+  }
+
+  .timeline-title {
+    font-size: 0.92rem;
+  }
+
+  .timeline-institution {
+    font-size: 0.82rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.82rem;
+  }
+
+  .project-card {
+    aspect-ratio: 16 / 12;
+  }
+
+  .project-title {
+    font-size: 0.82rem;
+  }
+
+  .project-category {
+    font-size: 0.68rem;
+  }
+
+  .filter-btn {
+    padding: 5px 12px;
+    font-size: 0.78rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. Touch-screen Optimizations (Tablets & Mobile)
+   -------------------------------------------------------------------------- */
+@media (hover: none) and (pointer: coarse) {
+  /* Prevent sticky hover states on touch interfaces */
+  .service-card:hover,
+  .stat-card:hover,
+  .timeline-card:hover,
+  .bento-card:hover,
+  .metric-pill:hover,
+  .contact-quick-card:hover {
+    transform: none;
+  }
+
+  /* Interactive tap feedback */
+  .btn-primary-gradient:active,
+  .btn-secondary-outline:active,
+  .btn-submit:active,
+  .btn-copy-email:active,
+  .btn-theme-toggle:active,
+  .btn-hamburger:active {
+    transform: scale(0.97);
+  }
+
+  /* Safe tap target sizes */
+  .nav-link,
+  .mobile-nav-link,
+  .filter-btn,
+  .hero-social-link,
+  .footer-links a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. Landscape Orientation on Mobile Devices (Short screen heights)
+   -------------------------------------------------------------------------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    padding-top: 85px;
+    padding-bottom: 30px;
+  }
+
+  .mobile-drawer {
+    padding: 16px;
+  }
+
+  .mobile-nav-links {
+    gap: 12px;
+  }
+
+  .mobile-nav-links a {
+    font-size: 1rem;
+  }
+
+  .modal-container {
+    max-height: 90vh;
+    padding: 18px;
   }
 }
